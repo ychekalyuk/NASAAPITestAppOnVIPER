@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MainTableViewCell: ReusableTableViewCell {
-    //MARK: - Views    
+    //MARK: - Views
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
