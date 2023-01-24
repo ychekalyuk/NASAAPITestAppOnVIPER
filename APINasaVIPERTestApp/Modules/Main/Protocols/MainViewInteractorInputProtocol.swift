@@ -6,5 +6,6 @@
 //
 
 protocol MainViewInteractorInputProtocol {
-    init(presenter: MainViewInteractorOutputProtocol)
+    init(presenter: MainViewInteractorOutputProtocol, networkManager: NetworkManagerProtocol)
+    func loadAPODData()
 }

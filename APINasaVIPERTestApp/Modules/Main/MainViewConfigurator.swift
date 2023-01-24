@@ -7,9 +7,10 @@
 
 final class MainViewConfigurator: MainViewConfiguratorInputProtocol {
     func configure(with view: MainViewController) {
-            let presenter = MainViewPresenter(view: view)
-            let interactor = MainViewInteractor(presenter: presenter)
-            view.presenter = presenter
-            presenter.interactor = interactor
-        }
+        let presenter = MainViewPresenter(view: view)
+        let networkManager = NetworkManager()
+        let interactor = MainViewInteractor(presenter: presenter, networkManager: networkManager)
+        view.presenter = presenter
+        presenter.interactor = interactor
+    }
 }

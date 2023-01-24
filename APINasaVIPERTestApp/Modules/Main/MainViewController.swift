@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class MainViewController: UIViewController {
-    
     //MARK: - Views
     private lazy var mainTableView: UITableView = {
         let tableView = UITableView()
+        tableView.register(cell: MainTableViewCell.self)
         tableView.layer.cornerRadius = 10
         tableView.dataSource = self
         return tableView
@@ -21,7 +22,8 @@ final class MainViewController: UIViewController {
     var presenter: MainViewOutputProtocol!
     
     //MARK: - Private Properties
-    private let configurator: MainViewConfiguratorInputProtocol = MainViewConfigurator()
+    private let configurator = MainViewConfigurator()
+    private var apods: [APOD] = []
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -30,27 +32,30 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .lightGray
         view.addAutolayoutSubviews(mainTableView)
         setupConstraints()
+        presenter.didLoad()
     }
 }
 
 //MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        100
+        apods.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        var content = cell.defaultContentConfiguration()
-        content.text = "Hello \(indexPath.row)"
-        cell.contentConfiguration = content
-        return cell
+        let apod = apods[indexPath.row]
+        let mainTableViewCell: MainTableViewCell = tableView.dequeueCell(for: indexPath)
+        mainTableViewCell.configure(title: apod.title, url: apod.url)
+        return mainTableViewCell
     }
 }
 
 //MARK: - MainViewInputProtocol
 extension MainViewController: MainViewInputProtocol {
-    
+    func reloadData(with apods: [APOD]) {
+        self.apods = apods
+        mainTableView.reloadData()
+    }
 }
 
 //MARK: - Layout

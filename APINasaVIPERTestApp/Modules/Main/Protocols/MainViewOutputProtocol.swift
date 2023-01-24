@@ -7,4 +7,5 @@
 
 protocol MainViewOutputProtocol {
     init(view: MainViewInputProtocol)
+    func didLoad()
 }

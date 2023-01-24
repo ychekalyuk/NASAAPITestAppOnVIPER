@@ -6,5 +6,5 @@
 //
 
 protocol MainViewInputProtocol: AnyObject {
-    
+    func reloadData(with models: [APOD])
 }
