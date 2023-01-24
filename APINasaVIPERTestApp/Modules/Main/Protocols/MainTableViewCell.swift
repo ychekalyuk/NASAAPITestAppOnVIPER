@@ -9,13 +9,7 @@ import UIKit
 import AVFoundation
 
 class MainTableViewCell: ReusableTableViewCell {
-    //MARK: - Views
-    private lazy var mainContentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemGray2
-        return view
-    }()
-    
+    //MARK: - Views    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -40,8 +34,7 @@ class MainTableViewCell: ReusableTableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .secondaryLabel
-        contentView.addAutolayoutSubview(mainContentView)
-        mainContentView.addAutolayoutSubviews(titleLabel, apodImageView, activityIndicatorView)
+        contentView.addAutolayoutSubviews(titleLabel, apodImageView, activityIndicatorView)
         setupLayout()
     }
     
@@ -84,23 +77,16 @@ class MainTableViewCell: ReusableTableViewCell {
     //MARK: - Layout
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            mainContentView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            mainContentView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            mainContentView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            mainContentView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: mainContentView.topAnchor, constant: 40),
-            titleLabel.leftAnchor.constraint(equalTo: mainContentView.leftAnchor, constant: 40),
-            titleLabel.rightAnchor.constraint(equalTo: mainContentView.rightAnchor, constant: -40)
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
+            titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 40),
+            titleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -40)
         ])
         
         NSLayoutConstraint.activate([
             apodImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
-            apodImageView.leftAnchor.constraint(equalTo: mainContentView.leftAnchor, constant: 40),
-            apodImageView.rightAnchor.constraint(equalTo: mainContentView.rightAnchor, constant: -40),
-            apodImageView.bottomAnchor.constraint(equalTo: mainContentView.bottomAnchor, constant: -40)
+            apodImageView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 40),
+            apodImageView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -40),
+            apodImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40)
         ])
         
         NSLayoutConstraint.activate([
