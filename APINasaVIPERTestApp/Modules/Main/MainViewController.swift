@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 final class MainViewController: UIViewController {
     //MARK: - Views
