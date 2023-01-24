@@ -29,12 +29,19 @@ class MainTableViewCell: ReusableTableViewCell {
         return imageView
     }()
     
+    private lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
+    
     //MARK: - Life Cycle Methods
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .secondaryLabel
         contentView.addAutolayoutSubview(mainContentView)
-        mainContentView.addAutolayoutSubviews(titleLabel, apodImageView)
+        mainContentView.addAutolayoutSubviews(titleLabel, apodImageView, activityIndicatorView)
         setupLayout()
     }
     
@@ -48,10 +55,12 @@ class MainTableViewCell: ReusableTableViewCell {
         guard let imageURL = URL(string: url) else { return }
         if let cachedImage = getCachedImage(from: imageURL) {
             apodImageView.image = cachedImage
+            self.activityIndicatorView.stopAnimating()
         } else {
             ImageManager.shared.fetchImageData(from: imageURL) { [weak self] imageData in
                 guard let self else { return }
                 self.apodImageView.image = UIImage(data: imageData)
+                self.activityIndicatorView.stopAnimating()
             }
         }
     }
@@ -92,6 +101,11 @@ class MainTableViewCell: ReusableTableViewCell {
             apodImageView.leftAnchor.constraint(equalTo: mainContentView.leftAnchor, constant: 40),
             apodImageView.rightAnchor.constraint(equalTo: mainContentView.rightAnchor, constant: -40),
             apodImageView.bottomAnchor.constraint(equalTo: mainContentView.bottomAnchor, constant: -40)
+        ])
+        
+        NSLayoutConstraint.activate([
+            activityIndicatorView.centerXAnchor.constraint(equalTo: apodImageView.centerXAnchor),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: apodImageView.centerYAnchor)
         ])
     }
 }
