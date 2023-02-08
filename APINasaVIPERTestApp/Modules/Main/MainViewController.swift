@@ -14,6 +14,7 @@ final class MainViewController: UIViewController {
         tableView.register(cell: MainTableViewCell.self)
         tableView.layer.cornerRadius = 10
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
     
@@ -46,6 +47,14 @@ extension MainViewController: UITableViewDataSource {
         let mainTableViewCell: MainTableViewCell = tableView.dequeueCell(for: indexPath)
         mainTableViewCell.configure(title: apod.title, url: apod.url)
         return mainTableViewCell
+    }
+}
+
+//MARK: - UITableViewDelegate
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = apods[indexPath.row].url
+        presenter.showDetailsScreen(url: url)
     }
 }
 

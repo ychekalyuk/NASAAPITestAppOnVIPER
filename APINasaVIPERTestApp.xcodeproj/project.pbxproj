@@ -25,6 +25,17 @@
 		C41C99F6297B26B8002AD3BD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C99F5297B26B8002AD3BD /* NetworkManager.swift */; };
 		C41C99FE297B363A002AD3BD /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C99FD297B363A002AD3BD /* MainTableViewCell.swift */; };
 		C41C9A00297B36A7002AD3BD /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C99FF297B36A7002AD3BD /* ReusableView.swift */; };
+		C43D36072983A362009458A5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D36062983A362009458A5 /* DetailsViewController.swift */; };
+		C43D360B2983A3A3009458A5 /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D360A2983A3A3009458A5 /* DetailsViewPresenter.swift */; };
+		C4F529A4298718C3003EDEAD /* DetailsViewConfiguratorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529A3298718C3003EDEAD /* DetailsViewConfiguratorInputProtocol.swift */; };
+		C4F529A6298718DE003EDEAD /* DetailsViewInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529A5298718DE003EDEAD /* DetailsViewInputProtocol.swift */; };
+		C4F529A8298718FC003EDEAD /* DetailsViewOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529A7298718FC003EDEAD /* DetailsViewOutputProtocol.swift */; };
+		C4F529AA29871919003EDEAD /* DetailsViewInteractorOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529A929871919003EDEAD /* DetailsViewInteractorOutputProtocol.swift */; };
+		C4F529AC29871937003EDEAD /* DetailsViewInteractorInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529AB29871937003EDEAD /* DetailsViewInteractorInputProtocol.swift */; };
+		C4F529AE29871AFD003EDEAD /* DetailsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529AD29871AFD003EDEAD /* DetailsViewInteractor.swift */; };
+		C4F529B029871B67003EDEAD /* DetailsViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529AF29871B67003EDEAD /* DetailsViewConfigurator.swift */; };
+		C4F529B229871EC1003EDEAD /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529B129871EC1003EDEAD /* MainViewRouter.swift */; };
+		C4F529B429871EF2003EDEAD /* MainViewRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F529B329871EF2003EDEAD /* MainViewRouterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +59,17 @@
 		C41C99F5297B26B8002AD3BD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C41C99FD297B363A002AD3BD /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		C41C99FF297B36A7002AD3BD /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		C43D36062983A362009458A5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C43D360A2983A3A3009458A5 /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
+		C4F529A3298718C3003EDEAD /* DetailsViewConfiguratorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewConfiguratorInputProtocol.swift; sourceTree = "<group>"; };
+		C4F529A5298718DE003EDEAD /* DetailsViewInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewInputProtocol.swift; sourceTree = "<group>"; };
+		C4F529A7298718FC003EDEAD /* DetailsViewOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewOutputProtocol.swift; sourceTree = "<group>"; };
+		C4F529A929871919003EDEAD /* DetailsViewInteractorOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewInteractorOutputProtocol.swift; sourceTree = "<group>"; };
+		C4F529AB29871937003EDEAD /* DetailsViewInteractorInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewInteractorInputProtocol.swift; sourceTree = "<group>"; };
+		C4F529AD29871AFD003EDEAD /* DetailsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewInteractor.swift; sourceTree = "<group>"; };
+		C4F529AF29871B67003EDEAD /* DetailsViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewConfigurator.swift; sourceTree = "<group>"; };
+		C4F529B129871EC1003EDEAD /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
+		C4F529B329871EF2003EDEAD /* MainViewRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +107,9 @@
 				C41C99D62979EC22002AD3BD /* SupportingFiles */,
 				C41C99D82979EC58002AD3BD /* Modules */,
 				C41C99F2297B1609002AD3BD /* Models */,
+				C43D36082983A36C009458A5 /* Managers */,
 				C41C99E42979F124002AD3BD /* Extensions */,
 				C41C99D52979EC14002AD3BD /* Source */,
-				C41C99F3297B1B8F002AD3BD /* ImageManager.swift */,
-				C41C99F5297B26B8002AD3BD /* NetworkManager.swift */,
 			);
 			path = APINasaVIPERTestApp;
 			sourceTree = "<group>";
@@ -121,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C41C99D92979EC61002AD3BD /* Main */,
+				C43D36092983A38E009458A5 /* Details */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -128,11 +150,13 @@
 		C41C99D92979EC61002AD3BD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C43D360C298716AB009458A5 /* Components */,
 				C41C99EF2979F8DB002AD3BD /* Protocols */,
+				C41C99DE2979ED3D002AD3BD /* MainViewConfigurator.swift */,
 				C41C99C52979E8E7002AD3BD /* MainViewController.swift */,
 				C41C99DA2979ED0C002AD3BD /* MainViewPresenter.swift */,
 				C41C99DC2979ED23002AD3BD /* MainViewInteractor.swift */,
-				C41C99DE2979ED3D002AD3BD /* MainViewConfigurator.swift */,
+				C4F529B129871EC1003EDEAD /* MainViewRouter.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -154,7 +178,7 @@
 				C41C99E72979F3A6002AD3BD /* MainViewOutputProtocol.swift */,
 				C41C99EB2979F41A002AD3BD /* MainViewInteractorInputProtocol.swift */,
 				C41C99E92979F405002AD3BD /* MainViewInteractorOutputProtocol.swift */,
-				C41C99FD297B363A002AD3BD /* MainTableViewCell.swift */,
+				C4F529B329871EF2003EDEAD /* MainViewRouterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -165,6 +189,47 @@
 				C41C99F0297B148C002AD3BD /* APOD.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C43D36082983A36C009458A5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C41C99F3297B1B8F002AD3BD /* ImageManager.swift */,
+				C41C99F5297B26B8002AD3BD /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C43D36092983A38E009458A5 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				C4AB6B0529943B0500CC7FB3 /*  Protocols */,
+				C4F529AF29871B67003EDEAD /* DetailsViewConfigurator.swift */,
+				C43D36062983A362009458A5 /* DetailsViewController.swift */,
+				C43D360A2983A3A3009458A5 /* DetailsViewPresenter.swift */,
+				C4F529AD29871AFD003EDEAD /* DetailsViewInteractor.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		C43D360C298716AB009458A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C41C99FD297B363A002AD3BD /* MainTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C4AB6B0529943B0500CC7FB3 /*  Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C4F529A3298718C3003EDEAD /* DetailsViewConfiguratorInputProtocol.swift */,
+				C4F529A5298718DE003EDEAD /* DetailsViewInputProtocol.swift */,
+				C4F529A7298718FC003EDEAD /* DetailsViewOutputProtocol.swift */,
+				C4F529A929871919003EDEAD /* DetailsViewInteractorOutputProtocol.swift */,
+				C4F529AB29871937003EDEAD /* DetailsViewInteractorInputProtocol.swift */,
+			);
+			path = " Protocols";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,18 +308,29 @@
 			files = (
 				C41C99E32979F10B002AD3BD /* UIView+Extension.swift in Sources */,
 				C41C99F1297B148C002AD3BD /* APOD.swift in Sources */,
+				C4F529B429871EF2003EDEAD /* MainViewRouterProtocol.swift in Sources */,
 				C41C99C62979E8E7002AD3BD /* MainViewController.swift in Sources */,
 				C41C99E82979F3A6002AD3BD /* MainViewOutputProtocol.swift in Sources */,
+				C4F529A6298718DE003EDEAD /* DetailsViewInputProtocol.swift in Sources */,
+				C4F529A4298718C3003EDEAD /* DetailsViewConfiguratorInputProtocol.swift in Sources */,
 				C41C99FE297B363A002AD3BD /* MainTableViewCell.swift in Sources */,
+				C4F529AC29871937003EDEAD /* DetailsViewInteractorInputProtocol.swift in Sources */,
+				C4F529A8298718FC003EDEAD /* DetailsViewOutputProtocol.swift in Sources */,
 				C41C99EA2979F405002AD3BD /* MainViewInteractorOutputProtocol.swift in Sources */,
 				C41C99C22979E8E7002AD3BD /* AppDelegate.swift in Sources */,
 				C41C99EC2979F41A002AD3BD /* MainViewInteractorInputProtocol.swift in Sources */,
+				C43D360B2983A3A3009458A5 /* DetailsViewPresenter.swift in Sources */,
 				C41C99EE2979F482002AD3BD /* MainViewConfiguratorInputProtocol.swift in Sources */,
+				C43D36072983A362009458A5 /* DetailsViewController.swift in Sources */,
 				C41C99E62979F38B002AD3BD /* MainViewInputProtocol.swift in Sources */,
 				C41C99DF2979ED3D002AD3BD /* MainViewConfigurator.swift in Sources */,
 				C41C9A00297B36A7002AD3BD /* ReusableView.swift in Sources */,
+				C4F529B229871EC1003EDEAD /* MainViewRouter.swift in Sources */,
+				C4F529AE29871AFD003EDEAD /* DetailsViewInteractor.swift in Sources */,
 				C41C99F6297B26B8002AD3BD /* NetworkManager.swift in Sources */,
 				C41C99DD2979ED23002AD3BD /* MainViewInteractor.swift in Sources */,
+				C4F529AA29871919003EDEAD /* DetailsViewInteractorOutputProtocol.swift in Sources */,
+				C4F529B029871B67003EDEAD /* DetailsViewConfigurator.swift in Sources */,
 				C41C99DB2979ED0C002AD3BD /* MainViewPresenter.swift in Sources */,
 				C41C99F4297B1B8F002AD3BD /* ImageManager.swift in Sources */,
 			);

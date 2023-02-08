@@ -13,6 +13,7 @@ final class MainViewPresenter: MainViewOutputProtocol {
     
     //MARK: - Private Properties
     var interactor: MainViewInteractorInputProtocol!
+    var router: MainViewRouterProtocol!
     
     //MARK: - Lifecycle Methods
     init(view: MainViewInputProtocol) {
@@ -29,5 +30,9 @@ final class MainViewPresenter: MainViewOutputProtocol {
 extension MainViewPresenter: MainViewInteractorOutputProtocol {
     func recieveAPODData(with apods: [APOD]) {
         view.reloadData(with: apods)
+    }
+    
+    func showDetailsScreen(url: String) {
+        router.showDetailsScreen(url: url)
     }
 }

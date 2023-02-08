@@ -8,4 +8,5 @@
 protocol MainViewOutputProtocol {
     init(view: MainViewInputProtocol)
     func didLoad()
+    func showDetailsScreen(url: String)
 }
